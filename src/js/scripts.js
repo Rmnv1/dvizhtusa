@@ -14,5 +14,5 @@ $(document).ready(function () {
   });
 
   // Запуск видео на всякий случай
-  $("#bcgVideo")[0].play();
+  // $("#bcgVideo")[0].play();
 });

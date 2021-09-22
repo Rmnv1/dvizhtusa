@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on("load", function () {
   // Лоадер
   $(".loader")
     .delay(400)

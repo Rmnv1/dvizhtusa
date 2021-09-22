@@ -1,13 +1,15 @@
-$(document).on("load", function () {
+$(document).ready(function () {
   // Лоадер
-  // $(".loader")
-  //   .delay(400)
-  //   .fadeOut(400, () => {
-  //     $("body").removeClass("loading");
-  //   });
+  $(".loader")
+    .delay(400)
+    .fadeOut(400, () => {
+      $("body").removeClass("loading");
+    });
 
   // Запуск видео на всякий случай
   $("#bcgVideo")[0].play();
+
+  // alert(1);
 
   // Якорные ссылки
   $(".anchor").click(function (e) {
@@ -17,11 +19,12 @@ $(document).on("load", function () {
   });
 });
 
-var video = document.getElementById("bcgVideo");
-video.onloadeddata = function () {
-  $(".loader")
-    .delay(400)
-    .fadeOut(400, () => {
-      $("body").removeClass("loading");
-    });
-};
+// var video = document.getElementById("bcgVideo");
+// video.onloadeddata = function () {
+//   $(".loader")
+//     .delay(400)
+//     .fadeOut(400, () => {
+//       $("body").removeClass("loading");
+//     });
+//   alert(2);
+// };

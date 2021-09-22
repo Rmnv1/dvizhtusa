@@ -1,10 +1,10 @@
 $(document).on("load", function () {
   // Лоадер
-  $(".loader")
-    .delay(400)
-    .fadeOut(400, () => {
-      $("body").removeClass("loading");
-    });
+  // $(".loader")
+  //   .delay(400)
+  //   .fadeOut(400, () => {
+  //     $("body").removeClass("loading");
+  //   });
 
   // Запуск видео на всякий случай
   $("#bcgVideo")[0].play();
@@ -16,3 +16,12 @@ $(document).on("load", function () {
     $("html,body").animate({ scrollTop: $(aid).offset().top }, "slow");
   });
 });
+
+var video = document.getElementById("bcgVideo");
+video.onloadeddata = function () {
+  $(".loader")
+    .delay(400)
+    .fadeOut(400, () => {
+      $("body").removeClass("loading");
+    });
+};
